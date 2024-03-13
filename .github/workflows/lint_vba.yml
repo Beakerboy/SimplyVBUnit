@@ -18,8 +18,7 @@ jobs:
         pip install 'vba_precompiler @ git+https://github.com/Beakerboy/VBA-Precompiler@main'
     - name: Precompile
       run: |
-        rm -rf .
-        python -m vba_precompiler -v7 -sWin64 ./src
-        rm -rf ./src
+        python -m vba_precompiler -v7 -sWin64 ./Source
+        rm -rf ./Source
     - name: Lint
       uses: Vba-actions/lint-vba@dev
